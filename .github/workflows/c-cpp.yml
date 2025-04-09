@@ -19,3 +19,8 @@ jobs:
       run: ./configure --enable-gzip
     - name: make
       run: make clean;make
+    - name: Archive production artifacts
+    - uses: actions/upload-artifact@v4
+      with:
+        name: executables
+        path: /home/runner/work/joy/joy/bin/
