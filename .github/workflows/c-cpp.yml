@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: deps
+      run: sudo apt-get install build-essential libssl-dev libpcap-dev libcurl4-openssl-dev
     - name: configure
       run: ./configure --enable-gzip
     - name: make
